@@ -7,14 +7,9 @@
     "test": "test"
   },
   "engines": {
-  "node": "4.1.1",
-  "npm": "2.1.x"
-   },
-
-"scripts": {
-  "postinstall": "./node_modules/.bin/webpack"
-},
-
+    "node": "4.1.1",
+    "npm": "2.1.x"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "webpack": "webpack"
@@ -33,7 +28,6 @@
     "jquery": "^3.1.0",
     "lodash": "^4.15.0",
     "react": "^15.3.1",
-    "react-cl-audio-player": "^1.0.0",
     "react-dom": "^15.3.1",
     "react-redux": "^4.4.5",
     "react-router": "^2.7.0",
