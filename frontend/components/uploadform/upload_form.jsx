@@ -35,13 +35,11 @@ render(){
     <div className="upload-form-container-outter-box">
       <div className="upload-form-container-inner-box">
       <form onSubmit={this.handleSubmit} className="upload-form-box">
-        Welcome to Timbre!
+        Please upload your Audio!
         <br/>
-        Please { this.props.formType } or { this.navLink() }
-
         <div className="upload-form">
           <br />
-          <label> Title:
+          <label> Cover:
             <input type="title"
               value={this.state.title}
               onChange={this.update("username")}
