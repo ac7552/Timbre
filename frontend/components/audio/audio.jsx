@@ -1,5 +1,4 @@
 import React from 'react';
-var CLAudioPlayer = require('react-cl-audio-player');
 
 class Audio extends React.Component{
   constructor(props){
@@ -14,16 +13,10 @@ class Audio extends React.Component{
           if (song >= height){
             song = 0;
           }
-          var wavesurfer = WaveSurfer.create({
-            container: '#waveform',
-            progressColor: 'purple'
-          });
-          debugger;
           let audio = this.refs.audio;
           let track_indexes = this.props.alltracks.map( track => (track.id));
           let curr_track = this.props.alltracks[track_indexes.indexOf(this.props.current_track) + song]
           audio.src = curr_track.url
-          wavesurfer.loaded(audio.src)
           audio.play();
           song += 1;
         });

@@ -24,3 +24,9 @@ export const recieveTracks = (tracks) => ({
   type: TrackConstants.RECIEVE_TRACKS,
   tracks
 })
+
+
+export const createTrack = (track) => ({
+  type: TrackConstants.CREATE_TRACK,
+  track
+})
