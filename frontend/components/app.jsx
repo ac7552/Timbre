@@ -7,6 +7,7 @@ const App = ({children}) => (
   <div>
     <header>
       <WelcomeContainer/>
+      <Audio/>
     </header>
     {children}
   </div>

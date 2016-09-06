@@ -11,6 +11,7 @@ class Home extends React.Component{
       <div>
           <h1> Home Page </h1>
           <TrackList/>
+          <div id="waveform" width="200"></div>
       </div>
     )
 

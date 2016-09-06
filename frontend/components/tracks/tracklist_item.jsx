@@ -12,7 +12,9 @@ class TrackListItem extends React.Component {
 
    render(){
      return(
-       <div className="audio" onClick={this.handleClick.bind(this,this.props.track)} >{this.props.track.name}</div>
+
+        <div className="audio" onClick={this.handleClick.bind(this,this.props.track)}>{this.props.name}</div>
+       
      );
    }
 

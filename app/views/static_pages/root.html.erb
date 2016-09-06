@@ -1,10 +1,9 @@
 <script id="bootstrap-current-user" type="text/javascript">
-
 <% if logged_in? %>
   	window.currentUser = <%= render("api/users/user.json.jbuilder",
   		user: current_user).html_safe %>
   <% end %>
   </script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/1.0.52/wavesurfer.min.js"></script>
     <div id="root">
-
-</div>
+    </div>
