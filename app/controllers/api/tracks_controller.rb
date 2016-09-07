@@ -2,7 +2,6 @@ class Api::TracksController < ApplicationController
 
 
   def create
-    byebug
     @track = Track.create(track_params)
     @track.user_id = current_user.id
     if @track.save
