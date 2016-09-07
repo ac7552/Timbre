@@ -7,6 +7,10 @@ import { connect } from 'react-redux';
     currentUser: state.session.currentUser
   });
 
+  // const mapDispatchToProps = (dispatch, ownProps) => ({
+  //     editUser:  (user) => dispatch(editUser(user))
+  // });
+
 
 
 //when exporting doesn't matter what call it afterwards  only default

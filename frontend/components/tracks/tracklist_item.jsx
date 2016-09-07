@@ -13,7 +13,7 @@ class TrackListItem extends React.Component {
    render(){
      return(
 
-        <div className="audio" onClick={this.handleClick.bind(this,this.props.track)}>
+        <div className="cover_art" onClick={this.handleClick.bind(this,this.props.track)}>
           <img src={this.props.track.pic_url}  height="200" width="200"/>
         </div>
 

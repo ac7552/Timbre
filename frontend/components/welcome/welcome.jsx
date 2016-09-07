@@ -5,17 +5,18 @@ const sessionLinks = () => (
   <nav className="nav-bar">
     <ul>
       <li><Link to="/" activeClassName="timbre">Timbre</Link></li>
-      <li> <Link to="/login" activeClassName="current">Login</Link></li>
-      <li> <Link to="/signup" activeClassName="current">Sign Up</Link></li>
+      <li> <Link className="login-button" to="/login" activeClassName="current">Login</Link></li>
+      <li> <Link className="login-button" to="/signup" activeClassName="current">Sign Up</Link></li>
     </ul>
     </nav>
 );
 //
 const sessionDelete = (logout) => (
+
   <nav className="nav-bar">
     <ul>
       <li><Link to="/" activeClassName="Upload">Timbre</Link></li>
-      <li> <button className="header-button" onClick={logout}>Log Out</button></li>
+      <li> <button className="logout-button" onClick={logout}>Log Out</button></li>
       <li> <Link to='upload' activeClassName="Upload">Upload</Link></li>
       <li> <Link to='profile' activeClassName="Profile">Profile</Link></li>
       <li> <Link to='home' activeClassName="Home">Home</Link></li>
@@ -32,6 +33,8 @@ function Welcome({currentUser, logout}){
   }else{
     return sessionLinks();
   }
+
+
 }
 
 export default Welcome;

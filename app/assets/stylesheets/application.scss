@@ -34,61 +34,96 @@
 
  @import "bootstrap-sprockets";
  @import "bootstrap";
+ html{
+   height: 100%;
+   body{
+     height: 100%;
+     #root{
+       height: 100%;
+       .appContainer{
+         height: 100%;
+       }
+     }
+   }
+ }
+
+
+.nav-bar{
+  height: 50px;
+  background-color: black;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  ul{
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  ul li a {
+    padding: 20px;
+    color: white;
+    font-weight: bold;
+}
+}
+
+.nav-bar .timbre {
+  margin-left: auto;
+}
+
+.nav-bar ul li a:hover {
+    background: grey;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
 
 
 //
+.login-form-container-outter-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100% - 100px);
+.login-form-container-inner-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 10px 10px;
+  background-color: white;
+  padding: 50px 50px 50px 50px;
+  text-align: center;
+   form{
+
+   }
+ }
+}
 
 body{
- background-position: center;
-    background-attachment: fixed;
-background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
   background-repeat: no-repeat;
   background-image: url('/background.jpg');
 }
 
-form{
-  margin: 0 auto;
-  width:250px;
-}
-
-.nav-bar{
+.covers{
   display: flex;
-  flex-direction: column;  /* make main axis vertical */
-  background-color: black;
-  height: 50px;  /* height for nav bar */
-  justify-content: center; /*center */
-  .timbre{
-    margin-left: auto;
-  }
-  ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-
-      li {
-          display: inline;
-      }
-  }
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
-.audio{
-  // background-color: red;
-  padding: 10px 10px 10px 10px;
-  width: 200px;
-  height: 200px;
-  border: 1px solid black;
-  img{
-    max-width:100%;
-    max-height:100%;
-    margin:auto;
-    display:block;
-  }
+.cover_art:hover{
+  box-shadow: 5px 5px 20px; 
+  cursor: pointer;
+}
+audio::-webkit-media-controls-panel{
+  background:rgba(0,0,0,0.3);
 }
 
-.audioPlayer{
-  background-color: green;
-  width: 300px;
-  height: 100px;
-  border: 1px solid black;
-  bottom: 300px;
+audio{
+  position:fixed;
+  width: 100%;
+  bottom: 0;
 }

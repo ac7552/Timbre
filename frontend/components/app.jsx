@@ -4,7 +4,7 @@ import WelcomeContainer from './welcome/welcome_container';
 import Audio from './audio/audio_container';
 
 const App = ({children}) => (
-  <div>
+  <div className="appContainer">
     <header>
       <WelcomeContainer/>
       <Audio/>

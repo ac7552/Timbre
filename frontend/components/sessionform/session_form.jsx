@@ -59,33 +59,24 @@ render(){
     <div className="login-form-container-outter-box">
       <div className="login-form-container-inner-box">
       <form onSubmit={this.handleSubmit} className="login-form-box">
-        Welcome to Timbre!
-        <br/>
-        Please { this.props.formType } or { this.navLink() }
+      <h1> Please { this.props.formType } or { this.navLink() } </h1> 
 
         <div className="login-form">
-          <br />
-          <label> Username:
             <input type="text"
               value={this.state.username}
+              placeholder="username"
               onChange={this.update("username")}
               className="login-input" />
-          </label>
-
-          <br />
-          <label> Password:
             <input type="password"
+              placeholder="password"
               value={this.state.password}
               onChange={this.update("password")}
-              className="login-input" />
-          </label>
-
-          <br />
-          <input type="submit" value="Submit" />
+              className="login-input"/>
         </div>
+        <input type="submit" value="Submit" />
       </form>
     </div>
-  </div> 
+  </div>
   );
 }
 

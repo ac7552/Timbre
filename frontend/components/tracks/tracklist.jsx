@@ -16,13 +16,13 @@ import Audio from '../audio/audio_container'
         <TrackListItem key={`track-list-item${id}`} track={this.props.tracks[id]}/>
       ))
       return (
-        <div>
+        <div className="covers">
           {alltracks}
         </div>
       )
     };
 
-    
+
 
   };
 
