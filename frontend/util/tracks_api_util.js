@@ -9,11 +9,11 @@ export const fetchTrack = (id) => {
   	});
 };
 
-export const createTrack = (track) => {
+export const createTrack = (track,success) => {
   $.ajax({
   		method: 'POST',
   		url: '/api/tracks',
-  		data: track,
+  		data: {track: track},
   		success,
       error: ()=> (
         console.log("Invalid Track Params")

@@ -8,6 +8,7 @@ class Profile extends React.Component{
     return(
       <div>
       <h1>{this.props.currentUser.username} </h1>
+      {this.props.children}
       </div>
     )
   }

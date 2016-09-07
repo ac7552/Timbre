@@ -2,9 +2,9 @@ class Api::TracksController < ApplicationController
 
 
   def create
+    byebug
     @track = Track.create(track_params)
     @track.user_id = current_user.id
-    @track.pic_url = "temp"
     if @track.save
        render json: @track
     else
@@ -37,7 +37,7 @@ class Api::TracksController < ApplicationController
 
 
   def track_params
-    params.require.permit(:track).permit(:title,:track_url)
+    params.require(:track).permit(:title,:url,:pic_url)
   end
 
 end

@@ -8,7 +8,7 @@ const sessionLinks = () => (
       <li> <Link to="/login" activeClassName="current">Login</Link></li>
       <li> <Link to="/signup" activeClassName="current">Sign Up</Link></li>
     </ul>
-</nav>
+    </nav>
 );
 //
 const sessionDelete = (logout) => (
@@ -16,9 +16,10 @@ const sessionDelete = (logout) => (
     <ul>
       <li><Link to="/" activeClassName="Upload">Timbre</Link></li>
       <li> <button className="header-button" onClick={logout}>Log Out</button></li>
-      <li> <Link to='/' activeClassName="Upload">Upload</Link></li>
+      <li> <Link to='upload' activeClassName="Upload">Upload</Link></li>
       <li> <Link to='profile' activeClassName="Profile">Profile</Link></li>
       <li> <Link to='home' activeClassName="Home">Home</Link></li>
+
     </ul>
   </nav>
 

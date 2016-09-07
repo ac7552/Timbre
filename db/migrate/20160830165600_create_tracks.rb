@@ -4,7 +4,7 @@ class CreateTracks < ActiveRecord::Migration[5.0]
       t.integer :user_id, null:false
       t.string :title,null:false
       t.string :pic_url, null:false
-      t.string :track_url, null:false
+      t.string :url, null:false
       t.timestamps
     end
   end

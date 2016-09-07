@@ -4,14 +4,14 @@ import { createTrack } from '../../actions/track_actions';
 
 
 const mapStateToProps = state => ({
-  errors: state.track.errors,
-  user_id: state.currentUser.id ,
-  username:  state.currentUser.username
+  // errors: state.track.errors,
+
+  current_user:  state.currentUser
 });
 
-const mapDispatchToProps = (dispatch, ownProps) => {
+const mapDispatchToProps = (dispatch, ownProps) => ({
     createTrack:  (track) => dispatch(createTrack(track))
-};
+});
 
 export default connect(
   mapStateToProps,

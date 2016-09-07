@@ -9,9 +9,13 @@ class UploadForm extends React.Component{
 
   this.state = {
     title: "",
-    description: ""
+    url: "",
+    pic_url: ""
   };
   this.handleSubmit = this.handleSubmit.bind(this);
+  this.uploadTrack = this.uploadTrack.bind(this);
+  this.uploadImage = this.uploadImage.bind(this);
+
 }
 
 
@@ -20,50 +24,58 @@ handleSubmit (e) {
    this.props.createTrack(this.state);
  }
 
+ update(field){
+   return e => {
+     // e.preventDefault();
+     this.setState({[field]: e.currentTarget.value });
+   };
+ }
 
-  upload(e) {
+  uploadTrack(e) {
      e.preventDefault();
       window.cloudinary.openUploadWidget(CLOUDINARY_OPTIONS, function(error, results){
+      let track_url = results[0].url
+      this.setState({url: track_url})
        if(!error){
-         this.props.createTrack(results[0]);
        }
      }.bind(this));
    }
 
+   uploadImage(e) {
+      e.preventDefault();
+       window.cloudinary.openUploadWidget(CLOUDINARY_OPTIONS, function(error, results){
+       let pic_url = results[0].url
+       this.setState({pic_url: pic_url})
+        if(!error){
+        }
+      }.bind(this));
+    }
+
+
 render(){
   return (
-    <div className="upload-form-container-outter-box">
-      <div className="upload-form-container-inner-box">
-      <form onSubmit={this.handleSubmit} className="upload-form-box">
-        Please upload your Audio!
-        <br/>
-        <div className="upload-form">
-          <br />
-          <label> Cover:
+
+      <form onSubmit={this.handleSubmit} className="form-inline">
+        <div>
+          <label> Input a Title:
             <input type="title"
               value={this.state.title}
-              onChange={this.update("username")}
-              className="login-input" />
+              onChange={this.update("title")}
+              className="form-control" />
           </label>
-
-          <br />
-          <label> Password:
-            <input type="password"
-              value={this.state.password}
-              onChange={this.update("password")}
-              className="login-input" />
-          </label>
-
-          <br />
-          <input type="submit" value="Submit" />
         </div>
+        <br/>
+        <button onClick={this.uploadTrack} className="btn btn-default"> Upload Track </button>
+        <button onClick={this.uploadImage} className="btn btn-default"> Upload Image </button>
+        <br/>
+        <br/>
+        <input type="submit" value="Submit" className="btn btn-default" />
       </form>
-    </div>
-  </div>
+
   );
 }
 
 
 }
 
-export default withRouter(SessionForm);
+export default withRouter(UploadForm);

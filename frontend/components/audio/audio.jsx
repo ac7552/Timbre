@@ -17,12 +17,13 @@ class Audio extends React.Component{
           let track_indexes = this.props.alltracks.map( track => (track.id));
           let curr_track = this.props.alltracks[track_indexes.indexOf(this.props.current_track) + song]
           audio.src = curr_track.url
+          audio.pause();
           audio.play();
           song += 1;
         });
   }
 
-
+//waveform peaks will bog down computer
 
   componentWillReceiveProps(nextProps) {
     this.songs = this.props.tracks
@@ -50,6 +51,7 @@ render () {
     if(this.props.current_track){
       playing = this.props.alltracks[track_indexes.indexOf(this.props.current_track)]
     }
+
      console.log(playing)
      let hidden;
      playing ? hidden = "show": hidden = "hidden";

@@ -6,10 +6,9 @@
 #  user_id    :integer          not null
 #  title      :string           not null
 #  pic_url    :string           not null
-#  track_url  :string           not null
+#  url        :string           not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
-#  name       :string
 #  artist     :hstore
 #
 
