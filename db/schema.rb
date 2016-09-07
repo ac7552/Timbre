@@ -42,6 +42,8 @@ ActiveRecord::Schema.define(version: 20160907164648) do
     t.hstore   "artist"
   end
 
+
+
   create_table "users", force: :cascade do |t|
     t.string   "username",        null: false
     t.string   "password_digest", null: false
