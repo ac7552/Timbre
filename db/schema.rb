@@ -10,11 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160902182745) do
+ActiveRecord::Schema.define(version: 20160908000400) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
   enable_extension "hstore"
+
+  create_table "comments", force: :cascade do |t|
+    t.integer  "user_id",    null: false
+    t.string   "body",       null: false
+    t.integer  "track_id",   null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "playlist_tracks", force: :cascade do |t|
     t.integer  "playlist_id"
@@ -48,6 +56,7 @@ ActiveRecord::Schema.define(version: 20160902182745) do
     t.string   "session_token",   null: false
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.string   "profile_pic"
   end
 
   add_foreign_key "playlist_tracks", "playlists"

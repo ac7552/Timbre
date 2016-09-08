@@ -22,6 +22,7 @@ class UploadForm extends React.Component{
 handleSubmit (e) {
    e.preventDefault();
    this.props.createTrack(this.state);
+   hashHistory.push("/");
  }
 
  update(field){
@@ -30,6 +31,8 @@ handleSubmit (e) {
      this.setState({[field]: e.currentTarget.value });
    };
  }
+
+
 
   uploadTrack(e) {
      e.preventDefault();
@@ -57,7 +60,7 @@ render(){
     <div className="login-form-container-outter-box">
       <div className="login-form-container-inner-box">
         <form onSubmit={this.handleSubmit} className="form-inline">
-          <div> 
+          <div>
             <label> Input a Title:
               <input type="title"
                 value={this.state.title}

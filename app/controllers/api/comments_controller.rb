@@ -9,9 +9,12 @@ class Api::CommentsController < ApplicationController
     end
   end
 
-
+  def index
+      @comments = Comment.where(track_id: params[:track_id])
+      render json: @comments
+  end
 
   def comment_params
-    params.require(:comment).permit(:body)
+    params.require(:comment).permit(:body,:track_id)
   end
 end

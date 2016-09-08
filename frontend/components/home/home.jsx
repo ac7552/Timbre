@@ -9,7 +9,7 @@ class Home extends React.Component{
   render(){
     return(
       <div>
-          <h1> Home Page </h1>
+          <h1> Discover Timbre Tracks </h1>
           <TrackList/>
       </div>
     )

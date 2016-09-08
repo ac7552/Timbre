@@ -7,6 +7,7 @@ import ProfileContainer from './profile/profile_container';
 import TrackListContainer from './tracks/tracklist_container';
 import HomeContainer from './home/home_container';
 import AudioContainer from './audio/audio_container';
+import CommentContainer from './comments/comments_container';
 
 
 class AppRouter extends React.Component{
@@ -42,7 +43,8 @@ render(){
       <Route path="/upload" component={UploadFormContainer} onEnter = {this.ensureLogIn}/>
       <Route path="/signup" component={SessionFormContainer} onEnter = {this.ensureLogout}/>
       <Route path="/profile" component={ProfileContainer} onEnter = {this.ensureLogIn}></Route>
-      <Route path="home" component={HomeContainer} onEnter = {this.ensureLogIn}/>
+      <Route path="/home" component={HomeContainer} onEnter = {this.ensureLogIn}/>
+      <Route path="/tracks/:id/comments" component={CommentContainer} onEnter = {this.ensureLogIn}/>
 
   </Route>
   </Router>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, hashHistory } from 'react-router';
 
 class TrackListItem extends React.Component {
   constructor(props){
@@ -8,13 +9,17 @@ class TrackListItem extends React.Component {
    handleClick(track){
        this.props.update_current(track);
        this.setState({current_track: track})
+       this.props.getSongComments(track);
+       hashHistory.push(`/tracks/${track.id}/comments`)
    }
+
 
    render(){
      return(
+        <div className="cover_art"  onClick={this.handleClick.bind(this,this.props.track)}>
+          <img src={this.props.track.pic_url}  height="100" width="100"/>
 
-        <div className="cover_art" onClick={this.handleClick.bind(this,this.props.track)}>
-          <img src={this.props.track.pic_url}  height="200" width="200"/>
+
         </div>
 
      );

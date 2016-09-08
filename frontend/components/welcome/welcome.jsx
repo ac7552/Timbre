@@ -15,12 +15,10 @@ const sessionDelete = (logout) => (
 
   <nav className="nav-bar">
     <ul>
-      <li><Link to="/" activeClassName="Upload">Timbre</Link></li>
       <li> <button className="logout-button" onClick={logout}>Log Out</button></li>
       <li> <Link to='upload' activeClassName="Upload">Upload</Link></li>
       <li> <Link to='profile' activeClassName="Profile">Profile</Link></li>
       <li> <Link to='home' activeClassName="Home">Home</Link></li>
-
     </ul>
   </nav>
 

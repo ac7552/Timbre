@@ -69,10 +69,24 @@
     color: white;
     font-weight: bold;
 }
+  ul button {
+     padding: 0px 20px;
+    color: white;
+    font-weight: bold;
+    border: none;
+    display: block;
+  }
 }
 
 .nav-bar .timbre {
   margin-left: auto;
+}
+
+.nav-bar ul li a:hover {
+    background: grey;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
 }
 
 .nav-bar ul li a:hover {
@@ -120,7 +134,7 @@ body{
   flex-direction: row;
   flex-wrap: wrap;
   .cover_art{
-      margin: 50px; 
+      margin: 50px;
   }
 }
 
