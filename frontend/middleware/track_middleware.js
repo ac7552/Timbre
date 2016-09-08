@@ -11,7 +11,7 @@ import React from 'react';
 
 export default ({getState, dispatch}) => next => action => {
   const tracksSuccess = data => dispatch(recieveTracks(data));
-  const trackSuccess = data => dispatch(receiveTrack(data));
+  const trackSuccess = data => dispatch(recieveTrack(data));
   // const trackRemoved = data => dispatch(removeTrack(data));
   // const trackErrored = data => dispatch(trackError(data.responseJSON));
   switch(action.type){

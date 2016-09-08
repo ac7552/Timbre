@@ -7,9 +7,6 @@ import Audio from '../audio/audio_container'
      super(props);
 
    }
-    // componentDidMount(){
-    //   this.props.requestTracks();
-    // }
 
     render(){
       const  alltracks = Object.keys(this.props.tracks).map ( id =>(
