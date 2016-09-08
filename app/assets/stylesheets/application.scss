@@ -119,7 +119,9 @@ body{
   justify-content: space-around;;
   flex-direction: row;
   flex-wrap: wrap;
-  margin: 50px; 
+  .cover_art{
+      margin: 50px; 
+  }
 }
 
 
