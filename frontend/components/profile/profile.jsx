@@ -7,8 +7,8 @@ class Profile extends React.Component{
       super(props);
   this.state = {
     username: this.props.currentUser.username,
-    profile_pic: "",
-    about: ""
+    profile_pic: this.props.currentUser.profile_pic,
+    about: this.props.currentUser.about
   };
   this.handleSubmit = this.handleSubmit.bind(this);
   this.uploadImage = this.uploadImage.bind(this);
@@ -58,12 +58,13 @@ render(){
       <div className="profile-form-container-inner-box">
         <form onSubmit={this.handleSubmit} className="form-inline">
           <div>
-            <h4> Change Username </h4>
+            <h4> Update About Me </h4>
             <textarea type="about"
               value={this.state.about}
               onChange={this.update("about")}
               className="form-inline"/>
-              <h4> Update About Me </h4>
+              <br/>
+              <h4> Change Username  </h4>
               <input type="username"
                 value={this.state.username}
                 onChange={this.update("username")}

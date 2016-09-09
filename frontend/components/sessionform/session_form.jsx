@@ -11,7 +11,7 @@ class SessionForm extends React.Component{
     password: ""
   };
   this.handleSubmit = this.handleSubmit.bind(this);
-
+  this.enterGuest = this.enterGuest.bind(this);
 
 }
 
@@ -42,8 +42,15 @@ componentDidUpdate(){
 	handleSubmit(e){
 		e.preventDefault();
 		const user = this.state;
+    this.props.formType = "login"
 		this.props.processForm({user});
 	}
+
+  enterGuest(e){
+    e.preventDefault();
+    const user = {username: "guest", password: "passwordpassword"};
+    this.props.processForm({user});
+  }
 
 	navLink(){
 		if (this.props.formType === "login") {
@@ -74,8 +81,10 @@ render(){
               onChange={this.update("password")}
               className="login-input"/>
         </div>
-        <br/>
-        <input className="enterSite" type="submit" value="Submit" />
+        <div className="enter">
+          <button className="guest" onClick={this.enterGuest}>Guest</button>
+          <input className="enterSite" type="submit" value="Submit" />
+        </div>
       </form>
     </div>
   </div>

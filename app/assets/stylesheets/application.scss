@@ -291,6 +291,18 @@ audio{
   float: left;
 }
 
+.guest{
+  margin: 10%;
+  border: none;
+  color: black;
+  font-weight: bold;
+}
+.enter{
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .logout-button:hover {
   background: grey;
   cursor: pointer;
