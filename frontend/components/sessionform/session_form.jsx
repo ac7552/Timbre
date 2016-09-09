@@ -42,7 +42,6 @@ componentDidUpdate(){
 	handleSubmit(e){
 		e.preventDefault();
 		const user = this.state;
-    this.props.formType = "login"
 		this.props.processForm({user});
 	}
 
