@@ -142,25 +142,6 @@ li{
 }
 
 
-#diamond {
-	width: 0;
-	height: 0;
-	border: 50px solid transparent;
-	border-bottom-color: rgba(0,0,0,0.3);
-	position: relative;
-	top: -50px;
-}
-#diamond:after {
-	content: '';
-	position: absolute;
-	left: -50px;
-	top: 50px;
-	width: 0;
-	height: 0;
-  border: black;
-	border: 50px solid transparent;
-	border-top-color:  rgba(0,0,0,0.3);
-}
 
 ///////Form Stuff
 .profile-form-container-outter-box{
@@ -299,18 +280,31 @@ audio{
  align-items: center;
  justify-content: center;
 }
-
+.homeTagContainer{
+  display: flex;
+  flex-direction: column;
+.homeTag{
+  font-family: Perpetua, Baskerville, "Big Caslon", "Palatino Linotype", Palatino, "URW Palladio L", "Nimbus Roman No9 L", serif;
+	font-size: 48px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.4px;
+  align-items: center;
+  margin: 2%;
+  text-align:center
+}
+}
 .websiteLogo {
 	font-family: Perpetua, Baskerville, "Big Caslon", "Palatino Linotype", Palatino, "URW Palladio L", "Nimbus Roman No9 L", serif;
 	font-size: 48px;
-  margin: 50%;
+  margin: 40%;
 	font-style: normal;
 	font-variant: normal;
 	font-weight: 500;
 	line-height: 26.4px;
   align-items: center;
   margin: 0 auto;
-
 }
 
 
@@ -327,10 +321,10 @@ audio{
   flex-direction: column;
   align-items: center;
 }
-.logout-button:hover {
-  background: grey;
-  cursor: pointer;
-  padding: 20px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
+// .logout-button:hover {
+//   background: grey;
+//   cursor: pointer;
+//   padding: 20px;
+//   text-decoration: none;
+//   transition: all 0.3s ease;
+// }

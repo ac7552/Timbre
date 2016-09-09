@@ -8,8 +8,8 @@ class Home extends React.Component{
 
   render(){
     return(
-      <div>
-          <h1> Discover Timbre Tracks </h1>
+      <div className="homeTagContainer">
+          <h1 className="homeTag"> Discover Timbre Tracks </h1>
           <TrackList/>
       </div>
     )
