@@ -34,34 +34,34 @@ handleSubmit (e) {
 
 
 render(){
-
   const allComments = this.props.comments.map( comment => (
-      <div>
-        <li>{comment.body}</li>
+      <div className="comment-item">
+
+        <ul>
+          <li>{comment.body}</li>
+          <h4>{this.props.current_user.username}</h4>
+        </ul>
       </div>
   ));
 
   return (
-    <div className="comment-container-outter-box">
-      <div className="comment-container-inner-box">
+    <div className = "comments-container">
+    <div className="comment-form-container-outter-box">
+      <div className="comment-form-container-inner-box">
         <form onSubmit={this.handleSubmit} className="form-inline">
-
           <div>
-            <label> Comment Body:
+            <h4>  Comment Body: </h4>
               <textarea type="body"
                 value={this.state.body}
                 onChange={this.update("body")}
                 className="form-inline" />
-            </label>
         </div>
         <input type="submit" value="Submit" className="btn btn-default" />
         </form>
       </div>
-      {allComments}
       </div>
-
-
-
+        {allComments}
+      </div>
   );
 }
 

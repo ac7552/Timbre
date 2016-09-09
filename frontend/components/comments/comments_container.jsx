@@ -5,7 +5,8 @@ import { createComment, requestSongComments  } from '../../actions/comment_actio
 
   const mapStateToProps = (state,ownProps) => ({
     comments: state.comments,
-    current_playingID: ownProps.params.id
+    current_playingID: ownProps.params.id,
+    current_user: state.session.currentUser
     //own props available to this component because of react router
     //makes routes params avaiable through ownprops.params
   });

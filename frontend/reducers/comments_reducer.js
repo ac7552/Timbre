@@ -6,7 +6,6 @@ const CommentsReducer = (state = [], action) => {
     case CommentConstants.RECIEVE_COMMENTS:
         return action.comments;
     case CommentConstants.RECIEVE_COMMENT:
-        debugger;
         return  [...state,action.comment]
     default:
       return state;
