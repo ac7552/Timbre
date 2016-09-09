@@ -42,13 +42,16 @@ componentDidUpdate(){
 	handleSubmit(e){
 		e.preventDefault();
 		const user = this.state;
+    this.props.formType = "login"
 		this.props.processForm({user});
 	}
 
   enterGuest(e){
     e.preventDefault();
-    const user = {username: "guest", password: "passwordpassword"};
-    this.props.processForm({user});
+    if(this.props.formType === "login"){
+      const user = {username: "guest", password: "passwordpassword"};
+      this.props.processForm({user});
+    }
   }
 
 	navLink(){
