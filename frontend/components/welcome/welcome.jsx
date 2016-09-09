@@ -3,14 +3,15 @@ import {Link} from 'react-router';
 import Audio from '../audio/audio_container';
 
 const sessionLinks = () => (
+  <div>
   <nav className="nav-bar">
     <ul>
-      
       <li><Link to="/" activeClassName="timbre">Timbre</Link></li>
       <li> <Link className="login-button" to="/login" activeClassName="current">Login</Link></li>
       <li> <Link className="login-button" to="/signup" activeClassName="current">Sign Up</Link></li>
     </ul>
     </nav>
+    </div>
 );
 //
 const sessionDelete = (logout) => (

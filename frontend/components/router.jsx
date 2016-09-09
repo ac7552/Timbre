@@ -8,7 +8,7 @@ import TrackListContainer from './tracks/tracklist_container';
 import HomeContainer from './home/home_container';
 import AudioContainer from './audio/audio_container';
 import CommentContainer from './comments/comments_container';
-
+import SplashContainer from '../splash/splash'
 
 class AppRouter extends React.Component{
   constructor(props){
@@ -38,7 +38,8 @@ render(){
   return(
   <Router history={ hashHistory }>
     <Route path="/" component={ App } onEnter={this.props.requestTracks}>
-      <Route to="/audio" component={AudioContainer} onEnter = {this.ensureLogIn} />
+      <IndexRoute to="/splash" component={SplashContainer} />
+      <Route path="/splash" component={SplashContainer} onEnter = {this.ensureLogIn} />
       <Route path="/login" component={SessionFormContainer} onEnter = {this.ensureLogout}/>
       <Route path="/upload" component={UploadFormContainer} onEnter = {this.ensureLogIn}/>
       <Route path="/signup" component={SessionFormContainer} onEnter = {this.ensureLogout}/>

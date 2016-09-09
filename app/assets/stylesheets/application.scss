@@ -291,6 +291,30 @@ audio{
   float: left;
 }
 
+.logoContainer{
+  height: 80%;
+ width: 100%;
+ display: flex;
+ position: fixed;
+ align-items: center;
+ justify-content: center;
+}
+
+.websiteLogo {
+	font-family: Perpetua, Baskerville, "Big Caslon", "Palatino Linotype", Palatino, "URW Palladio L", "Nimbus Roman No9 L", serif;
+	font-size: 48px;
+  margin: 50%;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.4px;
+  align-items: center;
+  margin: 0 auto;
+
+}
+
+
+
 .guest{
   margin: 10%;
   border: none;
