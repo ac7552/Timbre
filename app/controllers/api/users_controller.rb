@@ -18,11 +18,11 @@ class Api::UsersController < ApplicationController
     if @user.update_attributes(user_params)
         render 'api/users/show'
     else
-        render json "Invalid attributes", status: 422
+        render json: "Invalid attributes", status: 422
     end
   end
 
   def user_params
-    params.require(:user).permit(:username,:password)
+    params.require(:user).permit(:username,:password, :profile_pic, :about)
   end
 end

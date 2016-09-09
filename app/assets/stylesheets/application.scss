@@ -34,7 +34,10 @@
 
  a {text-decoration: none; }
  h1 {text-align: center;}
-
+ .aboutText {
+   text-align: center;
+   top: 100px;
+ }
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
@@ -108,7 +111,7 @@
      padding: 50px 50px 50px 50px;
      text-align: center;
      width: 280px;
-     border: 1px solid black;
+  
   }
 
 li{
@@ -117,7 +120,7 @@ li{
 
 ///////Form Stuff
 .login-form-container-outter-box{
-  margin: 30%;
+  // margin: 30%;
   display: flex;
   justify-content: center;
   height: calc(100% - 100px);
@@ -129,6 +132,47 @@ li{
     padding: 50px 50px 50px 50px;
     width: 300px;
    }
+}
+
+
+///////Form Stuff
+.profile-form-container-outter-box{
+  margin: 10%;
+  display: flex;
+  justify-content: center;
+  height: calc(100% - 100px);
+  .profile-form-container-inner-box{
+    display: flex;
+    align-items: center;
+    box-shadow: 10px 10px;
+    background-color: white;
+    padding: 50px 50px 50px 50px;
+    width: 300px;
+   }
+}
+
+.upload-form-container-outter-box{
+  margin: 10%;
+  display: flex;
+  justify-content: center;
+  height: calc(100% - 100px);
+  .upload-form-container-inner-box{
+    display: flex;
+    align-items: center;
+    box-shadow: 10px 10px;
+    background-color: white;
+    padding: 50px 50px 50px 50px;
+    width: 300px;
+   }
+}
+
+
+  .profilePic{
+  display: flex;
+  margin-left: 46%;
+  justify-content: center;
+  border: 1px solid black;
+  border-radius: 50%;
 }
 
 .vcontainer{

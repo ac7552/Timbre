@@ -57,21 +57,27 @@ handleSubmit (e) {
 
 render(){
   return (
-    <div className="login-form-container-outter-box">
-      <div className="login-form-container-inner-box">
+    <div>
+    <div className="upload-form-container-outter-box">
+      <div className="upload-form-container-inner-box">
         <form onSubmit={this.handleSubmit} className="form-inline">
           <div>
-            <label> Input a Title:
+            <h3> Input a Title: </h3>
               <input type="title"
                 value={this.state.title}
                 onChange={this.update("title")}
                 className="form-control" />
-            </label>
-          <button onClick={this.uploadTrack} className="btn btn-default"> Upload Track </button>
-          <button onClick={this.uploadImage} className="btn btn-default"> Upload Image </button>
-          <input type="submit" value="Submit" className="btn btn-default" />
-        </div>
+          <ul>
+            <br/>
+            <li> <button onClick={this.uploadTrack} className="btn btn-default"> Upload Track </button></li>
+            <br/>
+            <li> <button onClick={this.uploadImage} className="btn btn-default"> Upload Image </button></li>
+            <br/>
+            <li> <input type="submit" value="Submit" className="btn btn-default" /></li>
+            </ul>
+          </div>
         </form>
+      </div>
       </div>
       </div>
 
