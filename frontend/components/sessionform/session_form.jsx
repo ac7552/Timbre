@@ -56,10 +56,11 @@ componentDidUpdate(){
 
 render(){
   return (
+    <div>
     <div className="login-form-container-outter-box">
       <div className="login-form-container-inner-box">
       <form onSubmit={this.handleSubmit} className="login-form-box">
-      <h1> Please { this.props.formType } or { this.navLink() } </h1>
+      <h4> { this.props.formType } or { this.navLink() } </h4>
 
         <div className="login-form">
             <input type="text"
@@ -73,9 +74,11 @@ render(){
               onChange={this.update("password")}
               className="login-input"/>
         </div>
-        <input type="submit" value="Submit" />
+        <br/>
+        <input className="enterSite" type="submit" value="Submit" />
       </form>
     </div>
+  </div>
   </div>
   );
 }
