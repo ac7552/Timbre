@@ -5,6 +5,7 @@ class Api::UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
+    @user.about = " "
     if @user.save
         login_user!(@user)
       render 'api/users/show'

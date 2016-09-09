@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router';
+import Audio from '../audio/audio_container';
 
 const sessionLinks = () => (
   <nav className="nav-bar">
@@ -12,7 +13,7 @@ const sessionLinks = () => (
 );
 //
 const sessionDelete = (logout) => (
-
+  <div>
   <nav className="nav-bar">
     <ul>
       <li> <button className="logout-button" onClick={logout}>Log Out</button></li>
@@ -21,7 +22,8 @@ const sessionDelete = (logout) => (
       <li> <Link to='home' activeClassName="Home">Home</Link></li>
     </ul>
   </nav>
-
+  <Audio/>
+  </div>
   );
 
 

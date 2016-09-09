@@ -8,7 +8,7 @@ const App = ({children}) => (
     <header>
       <WelcomeContainer/>
 
-      <Audio/>
+      {/* <Audio/> */}
     </header>
     {children}
   </div>
