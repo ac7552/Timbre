@@ -9,6 +9,7 @@ import { editUser,recieveUser } from '../../actions/user_actions';
 
   const mapDispatchToProps = (dispatch, ownProps) => ({
       user_edit:  (user) => dispatch(editUser(user)),
+      get_user:    (user) => dispatch(recieveUser(user))
       // user_get: (user) => dispatch(recieveUser(user))
   });
 

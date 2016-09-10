@@ -28,7 +28,7 @@ componentDidUpdate(){
 
 	redirectIfLoggedIn(){
 		if (this.props.loggedIn){
-			hashHistory.push("/home");
+			hashHistory.push("/");
 		}
 	}
 

@@ -32,6 +32,10 @@ uploadImage(e) {
    }.bind(this));
  }
 
+componentDidMount(){
+  let user = {username: this.state.username, id: this.props.currentUser.id, profile_pic: this.state.profile_pic, about: this.state.about}
+  this.props.get_user(user)
+}
 
 handleSubmit (e) {
    e.preventDefault();
