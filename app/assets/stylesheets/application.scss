@@ -34,10 +34,10 @@
 
  a {text-decoration: none; }
  h1 {text-align: center;}
- .aboutText {
-   text-align: center;
-   top: 100px;
- }
+ // .aboutText {
+ //   text-align: center;
+ //   top: 100px;
+ // }
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
@@ -57,7 +57,7 @@
 
 .nav-bar{
   height: 50px;
-  background-color: black;
+  // background-color: black;
   flex: 1;
   display: flex;
   align-items: center;
@@ -69,12 +69,12 @@
   }
   ul li a {
     padding: 20px;
-    color: white;
+    color: black;
     font-weight: bold;
 }
   ul button {
      padding: 0px 20px;
-    color: white;
+    color: black;
     font-weight: bold;
     border: none;
     display: block;
@@ -86,18 +86,19 @@
 }
 
 .nav-bar ul li a:hover {
-    background: grey;
+    font-size: 18px;
     cursor: pointer;
     text-decoration: none;
     transition: all 0.3s ease;
 }
 
-.nav-bar ul li a:hover {
-    background: grey;
-    cursor: pointer;
-    text-decoration: none;
-    transition: all 0.3s ease;
+.logout-button:hover{
+  font-size: 18px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
+
 
 
 
@@ -120,19 +121,23 @@ li{
 
 // ///////Form Stuff
 .login-form-container-outter-box{
-  margin: 10%;
   display: flex;
   justify-content: center;
-  height: calc(100% - 60px);
+  flex-direction: column;
+  align-items: center;
+  margin: 30%;
   .login-form-container-inner-box{
-    display: flex;
-    align-items: center;
-    box-shadow: 10px 10px;
-    background-color: white;
+
     padding: 50px 50px 50px 50px;
     width: 300px;
     height: 250px;
-    border-radius: 50%;
+    border-radius: 3%;
+    text-align: center;
+    input{
+      color: black;
+      border: 1px solid black;
+      border-radius: 10%;
+    }
     .enterSite{
       border: none;
       color: black;
@@ -145,44 +150,89 @@ li{
 
 ///////Form Stuff
 .profile-form-container-outter-box{
-  margin: 10%;
   display: flex;
   justify-content: center;
-  height: calc(100% - 100px);
+  flex-direction: column;
+  align-items: center;
+  margin: 10%;
   .profile-form-container-inner-box{
-    display: flex;
-    align-items: center;
-    box-shadow: 10px 10px;
-    background-color: white;
-    padding: 50px 50px 50px 50px;
-    width: 300px;
+    // margin: 0px 10px 20px 180px;
+    // padding: 50px 50px 50px 50px;
+    color: black;
+    form{
+      margin-top: 30%;
+      // background-color: rgba(0,0,0,0.1);
+
+    }
+
+    textarea{
+      border-radius: 10%;
+      border: 1px solid grey;
+      height: 60px;
+      background-color: rgba(0,0,0,0.3);
+      color: white;
+    }
+    .form-username{
+      border-radius: 10%;
+      border: 1px solid grey;
+      height: 30px;
+      background-color: rgba(0,0,0,0.3);
+      color: white;
+    }
+
+    .profile-button{
+      background-color: transparent;
+      color: black;
+      border: none;
+      padding: 5px;
+      font-weight: bold;
    }
+}
+}
+.profile-button:hover{
+  font-size: 18px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+
+}
+
+.username{
+  text-transform: capitalize;
 }
 
 .upload-form-container-outter-box{
-  margin: 10%;
   display: flex;
   justify-content: center;
-  height: calc(100% - 100px);
+  flex-direction: column;
+  align-items: center;
+  margin: 20%;
   .upload-form-container-inner-box{
-    display: flex;
-    align-items: center;
-    box-shadow: 10px 10px;
-    background-color: white;
-    padding: 50px 50px 50px 50px;
-    width: 300px;
+    // padding: 50px 50px 50px 50px;
+
+    button{
+      background-color: transparent;
+      color: black;
+      border: none;
+      font-weight: bold;
+
+    }
+    input{
+      background-color: transparent;
+      color: black ;
+      border: none;
+      font-weight: bold;
+    }
    }
 }
 
 
   .profilePic{
-  display: flex;
-  margin-left: 46%;
-  justify-content: center;
+
   border: 1px solid black;
   border-radius: 50%;
-}
 
+}
 .vcontainer{
   display: flex;
   flex-direction: column;
@@ -197,7 +247,7 @@ li{
     padding: 3px;
     margin-top: -40px;
     border: none;
-    color: white;
+    color: black;
     font-size: 14px;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   }

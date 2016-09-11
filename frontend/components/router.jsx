@@ -38,7 +38,7 @@ render(){
   return(
   <Router history={ hashHistory }>
     <Route path="/" component={ App } onEnter={this.props.requestTracks}>
-      <IndexRoute to="/splash" component={SplashContainer} />
+      <IndexRoute to="/splash" component={SplashContainer}/>
       <Route path="/splash" component={SplashContainer} onEnter = {this.ensureLogIn} />
       <Route path="/login" component={SessionFormContainer} onEnter = {this.ensureLogout}/>
       <Route path="/upload" component={UploadFormContainer} onEnter = {this.ensureLogIn}/>

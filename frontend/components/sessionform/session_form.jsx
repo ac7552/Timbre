@@ -68,7 +68,7 @@ render(){
     <div className="login-form-container-outter-box">
       <div className="login-form-container-inner-box">
       <form onSubmit={this.handleSubmit} className="login-form-box">
-      <h4> { this.props.formType } or { this.navLink() } </h4>
+
 
         <div className="login-form">
             <input type="text"
@@ -76,6 +76,8 @@ render(){
               placeholder="username"
               onChange={this.update("username")}
               className="login-input" />
+              <br/>
+              <br/>
             <input type="password"
               placeholder="password"
               value={this.state.password}
@@ -83,7 +85,7 @@ render(){
               className="login-input"/>
         </div>
         <div className="enter">
-          <button className="guest" onClick={this.enterGuest}>Guest</button>
+          <button className="guest" onClick={this.enterGuest}>Demo</button>
           <input className="enterSite" type="submit" value="Submit" />
         </div>
       </form>

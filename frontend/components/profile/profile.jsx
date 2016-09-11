@@ -32,10 +32,10 @@ uploadImage(e) {
    }.bind(this));
  }
 
-componentDidMount(){
-  let user = {username: this.state.username, id: this.props.currentUser.id, profile_pic: this.state.profile_pic, about: this.state.about}
-  this.props.get_user(user)
-}
+// componentWillReceiveProps(nextProps){
+//   let user = {username: this.state.username, id: nextProps.currentUser.id, profile_pic: this.state.profile_pic, about: this.state.about}
+//   nextProps.get_user(user)
+// }
 
 handleSubmit (e) {
    e.preventDefault();
@@ -54,11 +54,12 @@ handleSubmit (e) {
 render(){
 
   return (
-   <div>
-   <h1> {this.props.currentUser.username} </h1>
-   <h4 className="aboutText"> {this.props.currentUser.about} </h4>
-   <img className="profilePic" height="100" width="100" src={this.props.currentUser.profile_pic}/>
+   <div class="profileStuff">
+
     <div className="profile-form-container-outter-box">
+    <img className="profilePic" height="100" width="100" src={this.props.currentUser.profile_pic}/>
+    <h1 className="username"> {this.props.currentUser.username} </h1>
+    <h4 className="aboutText"> {this.props.currentUser.about} </h4>
       <div className="profile-form-container-inner-box">
         <form onSubmit={this.handleSubmit} className="form-inline">
           <div>
@@ -66,17 +67,19 @@ render(){
             <textarea type="about"
               value={this.state.about}
               onChange={this.update("about")}
-              className="form-inline"/>
+              className="form-about"/>
               <br/>
               <h4> Change Username  </h4>
               <input type="username"
                 value={this.state.username}
                 onChange={this.update("username")}
-                className="form-inline"/>
+                className="form-username"/>
         </div>
         <br/>
-        <input type="submit" value="Submit" className="btn btn-default" />
-        <button onClick={this.uploadImage} className="btn btn-default"> Upload Image </button>
+        <button onClick={this.uploadImage} className="profile-button"> Upload Profile Picture </button>
+        <br/>
+        <input type="submit" value="Submit" className="profile-button" />
+        <br/>
         </form>
       </div>
       </div>
