@@ -112,7 +112,6 @@
      padding: 50px 50px 50px 50px;
      text-align: center;
      width: 280px;
-
   }
 
 li{
@@ -142,6 +141,7 @@ li{
       border: none;
       color: black;
       font-weight: bold;
+      background-color: transparent;
     }
     }
 }
@@ -156,8 +156,6 @@ li{
   align-items: center;
   margin: 10%;
   .profile-form-container-inner-box{
-    // margin: 0px 10px 20px 180px;
-    // padding: 50px 50px 50px 50px;
     color: black;
     form{
       margin-top: 30%;
@@ -166,18 +164,18 @@ li{
     }
 
     textarea{
-      border-radius: 10%;
       border: 1px solid grey;
+      border-radius: 10%;
       height: 60px;
-      background-color: rgba(0,0,0,0.3);
-      color: white;
+      background-color: white;
+      color: black;
     }
     .form-username{
       border-radius: 10%;
-      border: 1px solid grey;
       height: 30px;
-      background-color: rgba(0,0,0,0.3);
-      color: white;
+      background-color: white;
+      color: black;
+      height: 60px;
     }
 
     .profile-button{
@@ -218,13 +216,17 @@ li{
 
     }
     .upload-title{
-      background-color: rgba(0,0,0,0.3);
-      border: none;
+      background-color: white;
+      border-radius: 15%;
       font-weight: bold;
+
     }
    }
 }
 
+.uploadSubmit{
+  margin-left: 4%;
+}
 
   .Pic{
 
@@ -350,9 +352,11 @@ audio{
 	font-weight: 500;
 	line-height: 26.4px;
   align-items: center;
-  margin: 2%;
+  margin: 10%;
   text-align:center;
   color: black;
+
+
 }
 }
 .websiteLogo {

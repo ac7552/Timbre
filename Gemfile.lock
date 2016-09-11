@@ -179,7 +179,7 @@ DEPENDENCIES
   jquery-rails
   listen (~> 3.0.5)
   newrelic_rpm
-  pg (~> 0.18)
+  pg
   puma (~> 3.0)
   rails (~> 5.0.0)
   rails_12factor
