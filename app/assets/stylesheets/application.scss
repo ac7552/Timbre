@@ -18,7 +18,7 @@
  html, body, header, nav, h1, a,
  ul, li, strong, main, button, i,
  section, img, div, h2, p, form,
- fieldset, label, input, textarea,
+ fieldset, label, , textarea,
  span, article, footer, time, small {
    margin: 0;
    padding: 0;
@@ -217,7 +217,7 @@ li{
       font-weight: bold;
 
     }
-    input{
+    .upload-title{
       background-color: rgba(0,0,0,0.3);
       border: none;
       font-weight: bold;
@@ -293,7 +293,6 @@ body{
       margin: 50px;
       align-items: center;
       img{
-        border: 1px solid black;
         border-radius: 15%;
       }
       h4{
@@ -308,6 +307,13 @@ body{
   }
 }
 
+
+.uploadSubmit{
+  border: none;
+  background-color: transparent;
+  font-weight: bold;
+  color: black;
+}
 .cover_art:hover{
   box-shadow: 5px 5px 20px;
   cursor: pointer;

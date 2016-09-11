@@ -62,18 +62,18 @@ render(){
       <div className="upload-form-container-inner-box">
         <form onSubmit={this.handleSubmit} className="form-inline">
           <div>
-            <h3> Input a Title: </h3>
+            <h3> Input a Track Title: </h3>
               <input type="title"
                 value={this.state.title}
                 onChange={this.update("title")}
-                className="form-control" />
+                className="upload-title" />
           <ul>
             <br/>
             <li> <button onClick={this.uploadTrack} className="btn btn-default"> Upload Track </button></li>
             <br/>
             <li> <button onClick={this.uploadImage} className="btn btn-default"> Upload Image </button></li>
             <br/>
-            <li> <input type="submit" value="Submit" className="btn btn-default" /></li>
+            <li> <input type="submit" value="Submit" className="uploadSubmit" /></li>
             </ul>
           </div>
         </form>
