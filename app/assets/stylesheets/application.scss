@@ -293,7 +293,8 @@ body{
   .cover_art{
       margin: 50px;
       align-items: center;
-      border-radius: 10%;
+      border: 1px solide black;
+      border-radius: 50%;
       h4{
 
         color: white;
