@@ -218,8 +218,7 @@ li{
 
     }
     input{
-      background-color: transparent;
-      color: black ;
+      background-color: rgba(0,0,0,0.3);
       border: none;
       font-weight: bold;
     }
@@ -227,7 +226,7 @@ li{
 }
 
 
-  .profilePic{
+  .Pic{
 
   border: 1px solid black;
   border-radius: 50%;
@@ -293,8 +292,10 @@ body{
   .cover_art{
       margin: 50px;
       align-items: center;
-      border: 1px solide black;
-      border-radius: 50%;
+      img{
+        border: 1px solid black;
+        border-radius: 15%;
+      }
       h4{
 
         color: white;
