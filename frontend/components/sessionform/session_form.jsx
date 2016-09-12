@@ -48,7 +48,7 @@ componentDidUpdate(){
   enterGuest(e){
     e.preventDefault();
     if(this.props.formType === "login"){
-      const user = {username: "guest", password: "password"};
+      const user = {username: "guested", password: "password123"};
       this.props.processForm({user});
     }
   }
