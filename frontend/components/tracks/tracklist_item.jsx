@@ -22,11 +22,14 @@ class TrackListItem extends React.Component {
         <div className="cover_art"  onClick={this.handleClick.bind(this,this.props.track)}>
           <img src={this.props.track.pic_url}  height="100" width="100"/>
           <br/>
-          <p>{this.props.track.artist}</p>
+
 
         </div>
+        <div className = "coverArtStuff">
+        <p>{this.props.track.artist}</p>
         {/* <h4>{this,this.props.track.title}</h4> */}
         <button onClick={this.addComment.bind(this,this.props.track)}>{this,this.props.track.title}</button>
+        </div>
         </div>
      );
    }
