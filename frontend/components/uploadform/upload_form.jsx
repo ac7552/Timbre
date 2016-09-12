@@ -25,6 +25,10 @@ handleSubmit (e) {
    hashHistory.push("/");
  }
 
+ componentWillMount(){
+   this.props.getAllTracks();
+ }
+
  update(field){
    return e => {
      // e.preventDefault();

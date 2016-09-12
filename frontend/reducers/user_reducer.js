@@ -5,8 +5,7 @@ const UserReducer = (state = {}, action) => {
   let newState;
   switch(action.type){
     case UserConstants.RECIEVE_USER:
-      newState = {[action.user]: action.user};
-      return merge({}, state, newState);
+          return action.user;
     default:
       return state;
   }

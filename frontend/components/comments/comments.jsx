@@ -56,7 +56,7 @@ render(){
                 onChange={this.update("body")}
                 className="form-inline" />
         </div>
-        <input type="submit" value="Submit" className="btn btn-default" />
+        <input type="submit" value="Submit" className="commentButton" />
         </form>
       </div>
       </div>

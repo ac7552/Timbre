@@ -5,6 +5,9 @@ import { withRouter } from 'react-router';
 class Profile extends React.Component{
   constructor(props){
       super(props);
+  // if(this.props.user){
+  //   this.props.user.us
+  // }
   this.state = {
     username: this.props.currentUser.username,
     profile_pic: this.props.currentUser.profile_pic,
@@ -17,10 +20,11 @@ class Profile extends React.Component{
 // componentDidMount(){
 //   this.props.getAllComments(this.props.current_playingID);
 // }
+//
+componentWillMount(){
+  this.props.get_user(this.props.currentUser);
 
-// componentWillReceiveProps(nextProps){
-//   this.props.user_get({username: this.state.username, id: this.props.currentUser.id, profile_pic: this.state.profile_pic});
-// }
+}
 
 uploadImage(e) {
    e.preventDefault();
@@ -51,17 +55,22 @@ handleSubmit (e) {
 
 
 
+
 render(){
+
+
+
 
   return (
    <div class="profileStuff">
 
     <div className="profile-form-container-outter-box">
-    <img className="profilePic" height="100" width="100" src={this.props.currentUser.profile_pic}/>
-    <h1 className="username"> {this.props.currentUser.username} </h1>
-    <h4 className="aboutText"> {this.props.currentUser.about} </h4>
-      <div className="profile-form-container-inner-box">
-        <form onSubmit={this.handleSubmit} className="form-inline">
+        <img className="profilePic" height="100" width="100" src={this.props.user.profile_pic}/>
+        <h1 className="username"> {this.props.user.username} </h1>
+        <h4 className="aboutText"> {this.props.user.about} </h4>
+
+        <div className="profile-form-container-inner-box">
+                <form onSubmit={this.handleSubmit} className="form-inline">
           <div>
             <h4> Update About Me </h4>
             <textarea type="about"

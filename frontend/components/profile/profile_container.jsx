@@ -1,15 +1,16 @@
 import React from 'react';
 import Profile from './profile';
 import { connect } from 'react-redux';
-import { editUser,recieveUser } from '../../actions/user_actions';
+import { editUser,requestUser } from '../../actions/user_actions';
 
   const mapStateToProps = state => ({
-    currentUser: state.session.currentUser
-  });
+    currentUser: state.session.currentUser,
+    user: state.user
+    });
 
   const mapDispatchToProps = (dispatch, ownProps) => ({
       user_edit:  (user) => dispatch(editUser(user)),
-      get_user:    (user) => dispatch(recieveUser(user))
+      get_user:    (user) => dispatch(requestUser(user))
       // user_get: (user) => dispatch(recieveUser(user))
   });
 

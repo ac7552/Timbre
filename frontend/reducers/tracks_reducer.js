@@ -2,7 +2,7 @@ import {TrackConstants} from '../actions/track_actions';
 import merge from 'lodash/merge';
 
 const TracksReducer = (state ={}, action) => {
-    
+
   let newState
   switch(action.type){
     case TrackConstants.RECIEVE_TRACKS:

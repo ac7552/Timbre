@@ -7,3 +7,14 @@ export const edit = (user,success,error) => {
   		error
   	});
 };
+
+export const fetchUser = (user,success) => {
+  $.ajax({
+  		method: 'GET',
+  		url: `/api/users/${user.id}`,
+  		success,
+  		error: ()=> (
+        console.log("Invalid User")
+      )
+  	});
+};

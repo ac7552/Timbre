@@ -55,9 +55,9 @@ componentDidUpdate(){
 
 	navLink(){
 		if (this.props.formType === "login") {
-			return <Link to="/signup">Sign up instead</Link>;
+			return <Link to="/signup" className="formLinks">Sign up instead</Link>;
 		} else {
-			return <Link to="/login">Log in instead</Link>;
+			return <Link to="/login" className="formLinks">Log in instead</Link>;
 		}
 	}
 
@@ -69,7 +69,7 @@ render(){
       <div className="login-form-container-inner-box">
       <form onSubmit={this.handleSubmit} className="login-form-box">
 
-
+        {this.navLink()}
         <div className="login-form">
             <input type="text"
               value={this.state.username}
