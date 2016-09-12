@@ -10,7 +10,8 @@ class UploadForm extends React.Component{
   this.state = {
     title: "",
     url: "",
-    pic_url: ""
+    pic_url: "",
+    artist: ""
   };
   this.handleSubmit = this.handleSubmit.bind(this);
   this.uploadTrack = this.uploadTrack.bind(this);
@@ -71,6 +72,12 @@ render(){
                 value={this.state.title}
                 onChange={this.update("title")}
                 className="upload-title" />
+            <br/> 
+                <h3> Input a Track Artist: </h3>
+                  <input type="artist"
+                    value={this.state.artist}
+                    onChange={this.update("artist")}
+                    className="upload-title" />
           <ul>
             <br/>
             <li> <button onClick={this.uploadTrack} className="btn btn-default"> Upload Track </button></li>

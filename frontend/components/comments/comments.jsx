@@ -21,7 +21,7 @@ componentDidMount(){
 
 handleSubmit (e) {
    e.preventDefault();
-   this.props.createComment({body: this.state.body, track_id: this.props.current_playingID});
+   this.props.createComment({body: this.state.body, track_id: this.props.current_playingID, username: this.props.current_user.username});
  }
 
  update(field){
@@ -39,7 +39,7 @@ render(){
 
         <ul>
           <li>{comment.body}</li>
-          <h4>{this.props.current_user.username}</h4>
+          <h4>{comment.username}</h4>
         </ul>
       </div>
   ));
