@@ -9,6 +9,7 @@ import HomeContainer from './home/home_container';
 import AudioContainer from './audio/audio_container';
 import CommentContainer from './comments/comments_container';
 import SplashContainer from '../splash/splash'
+import EditContainer from './tracks/edit_container';
 
 class AppRouter extends React.Component{
   constructor(props){
@@ -46,7 +47,7 @@ render(){
       <Route path="/profile" component={ProfileContainer} onEnter = {this.ensureLogIn}></Route>
       <Route path="/home" component={HomeContainer} onEnter = {this.ensureLogIn}/>
       <Route path="/tracks/:id/comments" component={CommentContainer} onEnter = {this.ensureLogIn}/>
-
+      <Route path="/tracks/:id/edit" component={EditContainer} onEnter = {this.ensureLogIn}/>
   </Route>
   </Router>
   );

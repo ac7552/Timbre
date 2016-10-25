@@ -6,7 +6,10 @@ const CurrentTracks = (state = false, action) => {
   let newState
   switch(action.type){
     case CurrentTrackConstants.RECIEVE_TRACK:
-        return action.current_track.id;
+        newState =  action.track.id;
+        return newState
+    case CurrentTrackConstants.RESTART:
+          return false
     default:
       return state;
   }

@@ -1,40 +1,41 @@
 import React from 'react';
 import { Link, hashHistory } from 'react-router';
 import { withRouter } from 'react-router';
-import { createTrack } from '../../actions/track_actions';
 
-class UploadForm extends React.Component{
+class EditForm extends React.Component{
   constructor(props){
       super(props);
+      this.props.getTracks()
+      this.state = ({
+        title: "loading",
+        url:  "loading",
+        pic_url: "loading",
+        artist: "loading",
+        id: "loading",
+        user_id: "loading"
+      })
 
-  this.state = {
-    title: "",
-    url: "",
-    pic_url: "",
-    artist: ""
-  };
+
   this.handleSubmit = this.handleSubmit.bind(this);
   this.uploadTrack = this.uploadTrack.bind(this);
   this.uploadImage = this.uploadImage.bind(this);
-
 }
 
 
+
+
 handleSubmit (e) {
-  debugger
    e.preventDefault();
-   this.props.createTrack(this.state);
+   this.props.edit(this.state)
    hashHistory.push("/home");
  }
 
- componentWillMount(){
-   this.props.getAllTracks();
- }
 
  update(field){
    return e => {
      e.preventDefault();
      this.setState({[field]: e.currentTarget.value });
+
    };
  }
 
@@ -60,6 +61,20 @@ handleSubmit (e) {
       }.bind(this));
     }
 
+    componentWillMount(){
+      this.props.getTracks()
+    }
+
+   componentWillReceiveProps(nextProps){
+     this.setState({
+         title: nextProps.tracks[parseInt(nextProps.current_playing.id)].title,
+         url:  nextProps.tracks[parseInt(nextProps.current_playing.id)].url,
+         pic_url: nextProps.tracks[parseInt(nextProps.current_playing.id)].pic_url,
+         artist: nextProps.tracks[parseInt(nextProps.current_playing.id)].artist,
+         id: parseInt(nextProps.current_playing.id),
+         user_id:  nextProps.tracks[parseInt(nextProps.current_playing.id)].user_id
+     })
+}
 
 render(){
   return (
@@ -70,13 +85,13 @@ render(){
           <div>
             <h3> Input a Track Title: </h3>
               <input type="title"
-                value={this.state.title}
+                placeholder={this.state.title}
                 onChange={this.update("title")}
                 className="upload-title" />
             <br/>
                 <h3> Input a Track Artist: </h3>
                   <input type="artist"
-                    value={this.state.artist}
+                    placeholder={this.state.artist}
                     onChange={this.update("artist")}
                     className="upload-title" />
           <ul>
@@ -99,4 +114,4 @@ render(){
 
 }
 
-export default withRouter(UploadForm);
+export default withRouter(EditForm);

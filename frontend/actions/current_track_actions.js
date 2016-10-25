@@ -1,11 +1,17 @@
 export const CurrentTrackConstants  ={
-  RECIEVE_TRACK: "RECIEVE_TRACK"
+  RECIEVE_TRACK: "RECIEVE_TRACK"  ,
+  RESTART: "RESTART"
 };
 
 
 
 
-export const recieveCurrentTrack = (current_track) => ({
+export const recieveCurrentTrack = (track) => ({
   type:  CurrentTrackConstants.RECIEVE_TRACK,
-  current_track
+  track
+})
+
+export const restart = () => ({
+  type:  CurrentTrackConstants.RESTART
+
 })

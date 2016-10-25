@@ -38,8 +38,8 @@ render(){
       <div className="comment-item">
 
         <ul>
+          <p>{comment.username}</p>
           <li>{comment.body}</li>
-          <h4>{comment.username}</h4>
         </ul>
       </div>
   ));

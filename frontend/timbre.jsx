@@ -14,10 +14,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
       }     const root = document.getElementById('root');
 
-      $('nav-bar').click(function() {
-        alert("hey")
-        $(this).toggleClass('login-button');
-      });
+  
 
       window.store = store;
      ReactDOM.render(<Root store={store}/>, root);

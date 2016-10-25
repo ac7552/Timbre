@@ -48,7 +48,7 @@ componentDidUpdate(){
   enterGuest(e){
     e.preventDefault();
     if(this.props.formType === "login"){
-      const user = {username: "guested", password: "password123"};
+      const user = {username: "username", password: "password123"};
       this.props.processForm({user});
     }
   }
@@ -61,6 +61,14 @@ componentDidUpdate(){
 		}
 	}
 
+displayDemo(){
+  if(this.props.formType === "login"){
+    return  <button className="guest" onClick={this.enterGuest}>Demo</button>
+  }else{
+    return <div/>
+
+  }
+}
 
 render(){
   return (
@@ -85,7 +93,7 @@ render(){
               className="login-input"/>
         </div>
         <div className="enter">
-          <button className="guest" onClick={this.enterGuest}>Demo</button>
+          {this.displayDemo()}
           <input className="enterSite" type="submit" value="Submit" />
         </div>
       </form>

@@ -24,7 +24,7 @@ class Api::TracksController < ApplicationController
   end
 
 
-  def edit
+  def update
     @track = current_user.tracks.find(params[:id])
     if @track.update_attributes(track_params)
        render json: @track
@@ -33,10 +33,16 @@ class Api::TracksController < ApplicationController
     end
   end
 
+  def destroy
+    @track = Track.find_by_id(params[:id])
+    @track.delete
+    render json: @track
+  end
+
 
 
   def track_params
-    params.require(:track).permit(:title,:url,:pic_url,:artist)
+    params.require(:track).permit(:title,:url,:pic_url,:artist,:id)
   end
 
 end

@@ -22,6 +22,31 @@ export const createTrack = (track,success) => {
 };
 
 
+export const deleteTrack = (track,success) => {
+  $.ajax({
+  		method: 'DELETE',
+  		url: `/api/tracks/${track.id}`,
+  		data: {track: track},
+  		success,
+      error: ()=> (
+        console.log("Invalid Track Params")
+      )
+  	});
+};
+
+
+export const updateTrack = (track,success) => {
+  $.ajax({
+  		method: 'PATCH',
+      url: `/api/tracks/${track.id}`,
+  		data: {track: track},
+  		success,
+      error: ()=> (
+        console.log("Invalid Track Params")
+      )
+  	});
+};
+
 export const fetchTracks = (success) => {
   $.ajax({
   		method: 'GET',
