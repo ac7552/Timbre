@@ -1,8 +1,6 @@
 # Timbre
 
 
-Aaron
-
 ## Minimum Viable Product
 
 Timbre is a web application inspired by SoundCloud that will be built using Ruby on Rails, and React/Redux. By the end of Week 9, this app will have the following set of features, as a minimum:
